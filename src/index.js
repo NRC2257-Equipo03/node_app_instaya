@@ -9,8 +9,8 @@ app.get('/', (req,res) => {
     res.send("Hola desarrollador");
 });
 const mongoose = require('mongoose');
-mongoose
-    .connect(process.env.MONGODB_URI)
+
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('Conenctado a la base de datos atlas'))
     .catch((error) => console.error(error));
 app.listen(port, () => console.log('server listening on port' , port));
