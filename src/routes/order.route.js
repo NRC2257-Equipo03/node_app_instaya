@@ -2,7 +2,7 @@ let mongoose = require('mongoose'),
     express = require('express'),
     router = express.Router()
 
-let OrderRegisterSchema = require('../models/OrderRegister')
+let OrderRegisterSchema = require('../../models/Order')
 
 //CRUD
 
