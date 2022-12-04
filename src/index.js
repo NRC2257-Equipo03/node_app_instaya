@@ -3,15 +3,16 @@ let mongoose = require('mongoose');
 let cors = require('cors')
 let bodyParser = require('body-parser')
 require("dotenv").config()
-
-
 let app = express();
-const port = process.env.PORT || 3977;
+
+const registerRoutes = require("./routes/register.route");
+    app.use(express.json());
+    app.use('/api',registerRoutes);
+
+
+const port = process.env.PORT || 9000;
 
 //ROUTES
-app.get('/Login', (req, res) => {
-    res.send('Hola');
-});
 
 
 // mongodb connection

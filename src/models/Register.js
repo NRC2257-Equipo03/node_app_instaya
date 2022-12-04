@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let bookSchema = new Schema({
+let RegisterSchema = new Schema({
     FullName: {
         type: String,
         required: true,
@@ -19,11 +19,6 @@ let bookSchema = new Schema({
         type: String,
         required: true,
     },
-
-
-
-
-
 },{
     collection: 'Register'
 })
