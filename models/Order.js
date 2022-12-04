@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let bookSchema = new Schema({
+let orderRegisterSchema = new Schema({
 
     Date: {
         type: Date, default: Date.now,
@@ -57,4 +57,4 @@ let bookSchema = new Schema({
 
 })
 
-mongoose.exports = mongoose.model('OrderRegister', OrderRegisterSchema)
+module.exports = mongoose.model('OrderRegister', orderRegisterSchema)
