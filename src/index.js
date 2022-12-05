@@ -23,8 +23,8 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use(cors())
-app.use('/register.route', registerRoutes)
-app.use('/order.route', orderRoutes)
+app.use('/users', registerRoutes)
+app.use('/orders', orderRoutes)
 
 // PORT
 const port = process.env.PORT || 5000
