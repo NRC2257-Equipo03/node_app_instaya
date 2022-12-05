@@ -3,51 +3,51 @@ const Schema = mongoose.Schema
 
 let orderSchema = new Schema({
 
-    Date: {
+    date: {
         type: Date, default: Date.now,
         required: true,
     },
-    Hora: {
+    hora: {
         type: Date, default: Date.now,
         required: true,
     },
-    Largo: {
+    largo: {
         type: Number,
         required: true,
     },
-    Ancho: {
+    ancho: {
         type: Number,
         required: true,
     },
-    Alto: {
+    alto: {
         type: Number,
         required: true,
     },
-    Peso: {
+    peso: {
         type: Number,
         required: true,
     },
-    PickupAddress: {
+    pickupAddress: {
         type: String,
         required: true,
     },
-    City : {
+    city : {
         type: String,
         required: true,
     },
-    Name: {
+    name: {
         type: String,
         required: true,
     },
-    ID: {
+    id: {
         type: Number,
         required: true,
     },
-    Address: {
+    address: {
         type: String,
         required: true,
     },
-    City : {
+    city2 : {
         type: String,
         required: true,
     },

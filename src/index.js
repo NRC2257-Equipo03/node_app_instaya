@@ -4,8 +4,8 @@ let cors = require('cors')
 let bodyParser = require('body-parser')
 require("dotenv").config()
 
-const registerRoutes = require("./routes/register.route")
-
+const registerRoutes = require('./routes/register.route')
+const orderRoutes = require('./routes/order.route')
 
 mongoose
     .connect(process.env.MONGODB_URI)
@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(cors())
 app.use('/register.route', registerRoutes)
+app.use('/order.route', orderRoutes)
 
 // PORT
 const port = process.env.PORT || 5000
