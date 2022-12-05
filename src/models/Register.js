@@ -1,26 +1,25 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let RegisterSchema = new Schema({
-    FullName: {
-        type: String,
-        required: true,
-
-    },
-    User: {
+let registerSchema = new Schema({
+    fullname: {
         type: String,
         required: true,
     },
-    Password: {
+    username: {
         type: String,
         required: true,
     },
-    Email: {
+    email: {
         type: String,
         required: true,
     },
-},{
-    collection: 'Register'
+    password: {
+        type: String,
+        required: true,
+    }
+}, {
+    collection: 'users'
 })
 
-mongoose.exports = mongoose.model('Register', RegisterSchema)
+module.exports = mongoose.model('Register', registerSchema)
