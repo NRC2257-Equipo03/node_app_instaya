@@ -7,47 +7,59 @@ let orderSchema = new Schema({
         type: Date, default: Date.now,
         required: true,
     },
-    hora: {
+    hour: {
         type: Date, default: Date.now,
         required: true,
     },
-    largo: {
+    large: {
         type: Number,
         required: true,
     },
-    ancho: {
+    width: {
         type: Number,
         required: true,
     },
-    alto: {
+    tall: {
         type: Number,
         required: true,
     },
-    peso: {
+    weigth: {
         type: Number,
+        required: true,
+    },
+    packageType: {
+        type: String,
         required: true,
     },
     pickupAddress: {
         type: String,
         required: true,
     },
-    city : {
+    pickupName: {
         type: String,
         required: true,
     },
-    name: {
+    pickupId: {
         type: String,
         required: true,
     },
-    id: {
+    pickupCity : {
+        type: String,
+        required: true,
+    },
+    recipientName: {
+        type: String,
+        required: true,
+    },
+    recipientId: {
         type: Number,
         required: true,
     },
-    address: {
+    recipientAddress: {
         type: String,
         required: true,
     },
-    city2 : {
+    recipientCity : {
         type: String,
         required: true,
     },

@@ -7,7 +7,7 @@ let orderSchema = require('../models/Order')
 // CRUD
 
 // Create
-//localhost:5000/books/create
+//localhost:5000/orders/create
 router.route('/create').post((req, res, next) => {
     orderSchema.create(req.body, (error, data) => {
         if (error) {
@@ -18,8 +18,8 @@ router.route('/create').post((req, res, next) => {
     })
 })
 
-// Read Books
-//localhost:5000/books?userId=1234
+// Read orders
+//localhost:5000/orders?userId=1234
 router.route('/').get((req, res, next) => {
     orderSchema.find({ userId: req.query.userId }, (error, data) => {
         if (error) {
@@ -30,8 +30,8 @@ router.route('/').get((req, res, next) => {
     })
 })
 
-// Read Books
-//localhost:5000/books/1
+// Read orders
+//localhost:5000/orders/1
 router.route('/:id').get((req, res, next) => {
     orderSchema.findById(req.params.id, (error, data) => {
         if (error) {
@@ -42,8 +42,8 @@ router.route('/:id').get((req, res, next) => {
     })
 })
 
-// Update Books
-//localhost:5000/books/edit/2
+// Update orders
+//localhost:5000/orders/edit/2
 router.route('/edit/:id').put((req, res, next) => {
     orderSchema.findByIdAndUpdate(req.params.id, {
         $set: req.body
@@ -57,8 +57,8 @@ router.route('/edit/:id').put((req, res, next) => {
     })
 })
 
-// Delete Books
-//localhost:5000/books/delete/2
+// Delete orders
+//localhost:5000/orders/delete/2
 router.route('/delete/:id').delete((req, res, next) => {
     orderSchema.findByIdAndRemove(req.params.id, (error, data) => {
         if (error) {

@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let LoginSchema = new Schema({
+let userSchema = new Schema({
     UserName: {
         type: String,
-        required: false,
+        required: true,
     },
     Password: {
         type: String,
-        required: false,
+        required: true,
     }
 
 }, {
-    collection: 'Login'
+    collection: 'users'
 })
 
-mongoose.exports = mongoose.model('Login', LoginSchema)
+mongoose.exports = mongoose.model('Login', userSchema)

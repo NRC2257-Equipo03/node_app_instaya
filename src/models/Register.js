@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let registerSchema = new Schema({
+let userSchema = new Schema({
     fullname: {
         type: String,
         required: true,
@@ -22,4 +22,4 @@ let registerSchema = new Schema({
     collection: 'users'
 })
 
-module.exports = mongoose.model('Register', registerSchema)
+module.exports = mongoose.model('user', userSchema)
